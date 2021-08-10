@@ -198,6 +198,7 @@ class WalletConnectProvider extends ProviderEngine {
       this.emit("error", error);
       throw error;
     }
+    delete payload.skipCache
     return this.http.send(payload);
   }
 
